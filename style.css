@@ -224,7 +224,7 @@ p { margin: 0; }
 .recensioni .pila { max-width: 640px; }
 
 /* ---------- Piede ---------- */
-.piede { background: var(--grigio); padding: 40px 0 32px; font-size: 14px; color: var(--ardesia); }
+.piede { background: var(--grigio); border-top: 1px solid #DCDCDC; padding: 40px 0 32px; font-size: 14px; color: var(--ardesia); }
 .piede__marchio { width: auto; flex: 1 1 auto; }
 .piede__marchio .marchio__ruolo { color: var(--ardesia); opacity: .75; }
 .piede__marchio .marchio__nome { font-size: clamp(30px, 4.2vw, 60px); }
