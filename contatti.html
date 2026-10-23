@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatti | Andrea Roberto Castellani, psicologo e psicoterapeuta a Pisa</title>
+  <meta name="description" content="Contatti di Andrea Roberto Castellani, psicologo e psicoterapeuta a Pisa e online: telefono, email, indirizzo dello studio e modulo per scrivere un messaggio.">
+  <meta property="og:title" content="Contatti | Andrea Roberto Castellani">
+  <meta property="og:description" content="Telefono, email, indirizzo dello studio a Pisa e modulo per scrivere un messaggio.">
+  <meta property="og:type" content="website">
+  <!-- Iubenda: installazione (banner cookie e consenso). Deve restare il primo script della pagina. -->
+  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/f34f0510-6001-48b8-a6d8-528f20d0c39e.js"></script>
+  <link rel="icon" href="img/logo-celeste.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="salta" href="#contenuto">Vai al contenuto</a>
+
+  <header class="testata">
+    <div class="contenitore testata__riga">
+      <a class="marchio" href="index.html" aria-label="Andrea Roberto Castellani, torna all'inizio">
+        <img src="img/logo-celeste.png" alt="" width="80" height="90">
+        <span class="marchio__testo">
+          <span class="marchio__nome">Andrea Roberto Castellani</span>
+          <span class="marchio__ruolo">Psicologo - Psicoterapeuta a Pisa e online</span>
+        </span>
+      </a>
+
+      <button class="menu-apri" type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+
+      <nav id="menu" class="menu" aria-label="Menu principale">
+        <a href="index.html#chi-sono">Chi sono</a>
+        <a href="index.html#aree">Di cosa mi occupo</a>
+        <a href="index.html#come-funziona">Come funziona</a>
+        <a href="contatti.html" aria-current="page">Contatti</a>
+        <a class="bottone bottone--pieno" href="prenota.html">Prenota un colloquio</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="sezione contatti-pagina">
+      <div class="contenitore pila pila--larga">
+        <div class="pila contatti-pagina__intro">
+          <h1>Contatti</h1>
+          <p class="testo-grande">Puoi chiamarmi, scrivermi o venire a trovarmi in studio. Se preferisci, lascia un messaggio dal modulo e ti rispondo appena possibile.</p>
+        </div>
+
+        <div class="contatti-pagina__griglia">
+          <div class="pila">
+            <ul class="lista-contatti">
+              <li>
+                <span class="lista-contatti__etichetta">Telefono</span>
+                <a href="tel:+393385645903">+39 338 564 5903</a>
+              </li>
+              <li>
+                <span class="lista-contatti__etichetta">Email</span>
+                <a href="mailto:andrearobertocastellani@gmail.com">andrearobertocastellani@gmail.com</a>
+              </li>
+              <li>
+                <span class="lista-contatti__etichetta">Studio</span>
+                <a href="https://maps.app.goo.gl/DbH1Px4Cvwr9Uro67" target="_blank" rel="noopener">Via Italo Bargagna 60, Pisa<br>presso Studio “Il Quadrifoglio”</a>
+              </li>
+              <li>
+                <span class="lista-contatti__etichetta">Online</span>
+                <span>Colloqui in videochiamata, da dove preferisci</span>
+              </li>
+              <li>
+                <span class="lista-contatti__etichetta">Instagram</span>
+                <a href="https://www.instagram.com/ar.caste_psico/" target="_blank" rel="noopener">@ar.caste_psico</a>
+              </li>
+            </ul>
+            <div class="riquadro-prenota">
+              <p>Vuoi fissare subito un appuntamento?</p>
+              <a class="bottone bottone--pieno" href="prenota.html">Prenota un colloquio</a>
+            </div>
+          </div>
+
+          <form class="modulo" id="modulo-contatti" data-endpoint="" novalidate>
+            <h2>Scrivimi un messaggio</h2>
+            <p class="modulo__avviso">Non scrivere qui informazioni sulla tua salute o dettagli personali: ne parleremo con calma al colloquio.</p>
+
+            <div class="modulo__campo">
+              <label for="m-nome">Nome e cognome</label>
+              <input id="m-nome" name="nome" type="text" autocomplete="name" required>
+            </div>
+            <div class="modulo__campo">
+              <label for="m-email">Email</label>
+              <input id="m-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="modulo__campo">
+              <label for="m-tel">Telefono <span class="modulo__facoltativo">(facoltativo)</span></label>
+              <input id="m-tel" name="telefono" type="tel" autocomplete="tel">
+            </div>
+            <div class="modulo__campo">
+              <label for="m-msg">Messaggio</label>
+              <textarea id="m-msg" name="messaggio" rows="5" required></textarea>
+            </div>
+
+            <!-- Campo trappola contro i robot: deve restare vuoto -->
+            <div class="modulo__trappola" aria-hidden="true">
+              <label for="m-sito">Non compilare questo campo</label>
+              <input id="m-sito" name="sito" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <label class="modulo__consenso">
+              <input type="checkbox" name="consenso" required>
+              <span>Ho letto la <a href="https://www.iubenda.com/privacy-policy/83963626" class="iubenda-noiframe iubenda-embed" target="_blank" rel="noopener">privacy policy</a> e acconsento al trattamento dei miei dati per ricevere una risposta.</span>
+            </label>
+
+            <button class="bottone bottone--pieno bottone--grande" type="submit">Invia messaggio</button>
+            <p class="modulo__esito" id="modulo-esito" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="piede">
+    <div class="contenitore piede__riga">
+      <a class="marchio piede__marchio" href="index.html" aria-label="Andrea Roberto Castellani, torna all'inizio">
+        <img src="img/logo-celeste.png" alt="" width="110" height="124">
+        <span class="marchio__testo">
+          <span class="marchio__nome">Andrea Roberto Castellani</span>
+        </span>
+      </a>
+      <div class="piede__info">
+        <p>Iscritto all'Ordine degli Psicologi della Toscana, n. 8835</p>
+        <p>P.IVA 02357130505 · <a class="piede__mappa" href="https://maps.app.goo.gl/DbH1Px4Cvwr9Uro67" target="_blank" rel="noopener">Via Italo Bargagna 60, Pisa (presso Studio “Il Quadrifoglio”)</a></p>
+        <nav class="piede__link" aria-label="Informazioni legali">
+          <a href="https://www.iubenda.com/privacy-policy/83963626" class="iubenda-noiframe iubenda-embed" title="Privacy Policy" target="_blank" rel="noopener">Privacy policy</a>
+          <a href="https://www.iubenda.com/privacy-policy/83963626/cookie-policy" class="iubenda-noiframe iubenda-embed" title="Cookie Policy" target="_blank" rel="noopener">Cookie policy</a>
+          <a href="https://www.instagram.com/ar.caste_psico/">Instagram</a>
+        </nav>
+        <p class="piede__copy">© 2026 Andrea Roberto Castellani</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Header fisso su smartphone: si restringe dopo un po' di scorrimento
+    const testata = document.querySelector('.testata');
+    const aggiornaTestata = () => testata.classList.toggle('testata--compatta', window.scrollY > 40);
+    window.addEventListener('scroll', aggiornaTestata, { passive: true });
+    aggiornaTestata();
+
+    // Menu per smartphone
+    const bottoneMenu = document.querySelector('.menu-apri');
+    const menu = document.getElementById('menu');
+    bottoneMenu.addEventListener('click', () => {
+      const aperto = menu.classList.toggle('menu--aperto');
+      bottoneMenu.setAttribute('aria-expanded', aperto);
+      bottoneMenu.setAttribute('aria-label', aperto ? 'Chiudi il menu' : 'Apri il menu');
+    });
+
+    // Modulo contatti.
+    // Se in data-endpoint c'è l'indirizzo di un servizio di invio (es. Formspree), il messaggio parte da qui.
+    // Se è vuoto, si apre il programma di posta con il messaggio già scritto.
+    const EMAIL_DESTINATARIO = 'andrearobertocastellani@gmail.com';
+    const modulo = document.getElementById('modulo-contatti');
+    const esito = document.getElementById('modulo-esito');
+    modulo.addEventListener('submit', async e => {
+      e.preventDefault();
+      esito.className = 'modulo__esito';
+      if (modulo.sito.value) return; // robot
+      if (!modulo.checkValidity()) {
+        modulo.reportValidity();
+        return;
+      }
+      const dati = new FormData(modulo);
+      const endpoint = modulo.dataset.endpoint;
+      if (endpoint) {
+        try {
+          const risposta = await fetch(endpoint, { method: 'POST', body: dati, headers: { Accept: 'application/json' } });
+          if (!risposta.ok) throw new Error();
+          modulo.reset();
+          esito.textContent = 'Grazie, il messaggio è stato inviato. Ti rispondo appena possibile.';
+          esito.classList.add('modulo__esito--ok');
+        } catch (err) {
+          esito.textContent = 'Non sono riuscito a inviare il messaggio. Riprova o scrivimi a ' + EMAIL_DESTINATARIO + '.';
+          esito.classList.add('modulo__esito--errore');
+        }
+      } else {
+        const corpo = 'Nome: ' + dati.get('nome') + '\nEmail: ' + dati.get('email') + '\nTelefono: ' + (dati.get('telefono') || '-') + '\n\n' + dati.get('messaggio');
+        window.location.href = 'mailto:' + EMAIL_DESTINATARIO + '?subject=' + encodeURIComponent('Messaggio dal sito') + '&body=' + encodeURIComponent(corpo);
+        esito.textContent = 'Si sta aprendo il tuo programma di posta con il messaggio pronto da inviare.';
+        esito.classList.add('modulo__esito--ok');
+      }
+    });
+  </script>
+  <!-- Iubenda: privacy policy e cookie policy (si aprono in una finestra sopra il sito) -->
+  <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</body>
+</html>

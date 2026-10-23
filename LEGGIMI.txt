@@ -1,0 +1,26 @@
+SITO DI ANDREA ROBERTO CASTELLANI - COSA COMPLETARE PRIMA DI PUBBLICARE
+
+1. FOTO: metti nella cartella "img" due file con questi nomi esatti:
+   - andrea.jpg  (la foto di Andrea: scaricala dal Gestore media di Wix)
+   - studio.jpg  (foto dello studio, orizzontale o quadrata)
+
+2. GOOGLE CALENDAR:
+   - In Google Calendar crea una "Pagina di prenotazione" per il primo colloquio
+     (durata, orari disponibili, campi del modulo: nome, telefono, email).
+   - Premi "Condividi" e copia il codice della pagina.
+   - In index.html cerca [ID-PAGINA-PRENOTAZIONE] (compare 2 volte)
+     e sostituiscilo con il codice copiato.
+
+3. TESTI TRA PARENTESI QUADRE in index.html: telefono, email, indirizzo,
+   P.IVA, nome utente Instagram, link al profilo MioDottore.
+
+4. RECENSIONI: la sezione finale e' facoltativa. Prima di pubblicarla
+   conviene chiedere conferma all'Ordine degli Psicologi della Toscana.
+   Per toglierla, cancella in index.html il blocco tra
+   "RECENSIONI (facoltativa)" e "FINE RECENSIONI".
+
+5. PRIVACY E COOKIE: crea le pagine privacy.html e cookie.html
+   (per esempio con iubenda) e aggiungi il banner cookie:
+   Instagram e Google Calendar usano cookie di terze parti.
+
+6. COLORI: sono tutti all'inizio di style.css, nella sezione :root.

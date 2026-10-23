@@ -1,0 +1,378 @@
+/* =========================================================
+   Andrea Roberto Castellani – stile del sito
+   Stile ripreso dal sito Wix "Psicologo Online".
+   I colori principali sono qui: cambiandoli si aggiorna tutto.
+   ========================================================= */
+
+:root {
+  --grigio: #F9F9F9;        /* testata, apertura, come funziona */
+  --azzurro: #E7F8FF;       /* chi sono, instagram, recensioni */
+  --ardesia: #2F424D;       /* testo e sezione scura */
+  --ardesia-2: #506F84;     /* riquadri e sezione contatti */
+  --ardesia-3: #648CA7;     /* nota nei contatti */
+  --muto: #6F828B;          /* testi secondari */
+  --teal: #13818B;          /* pulsanti, numeri, dettagli */
+  --teal-scuro: #0E6068;
+  --nebbia: #D5E6ED;        /* footer e testi su scuro */
+  --nebbia-2: #B0C1CA;
+  --pannello: #F0F0F0;
+  --largo: 1000px;
+
+  --serif: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --sans: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+body {
+  margin: 0;
+  background: var(--grigio);
+  color: var(--ardesia);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--teal); }
+a:hover { color: var(--ardesia); }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+
+h1, h2, h3, h4 { margin: 0; font-family: var(--serif); font-weight: 500; line-height: 1.05; color: var(--ardesia); }
+h1 { font-size: clamp(46px, 6vw, 76px); }
+h2 { font-size: clamp(36px, 4.4vw, 56px); }
+h3 { font-size: clamp(28px, 3.3vw, 42px); }
+p { margin: 0; }
+
+.contenitore { width: 100%; max-width: calc(var(--largo) + 280px); margin: 0 auto; padding: 0 140px; }
+.pila { display: flex; flex-direction: column; gap: 22px; }
+.pila--larga { gap: 35px; }
+.testo-grande { font-size: 19px; }
+
+.salta { position: absolute; left: -9999px; top: 8px; background: #fff; padding: 10px 16px; border-radius: 8px; z-index: 100; }
+.salta:focus { left: 8px; }
+
+/* ---------- Pulsanti ---------- */
+.bottoni { display: flex; flex-wrap: wrap; gap: 14px; }
+.bottone {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 30px; border-radius: 100px;
+  font-family: var(--sans); font-size: 16px; font-weight: 400; text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--teal);
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.bottone--grande { min-height: 48px; padding: 0 34px; }
+.bottone--pieno { background: var(--teal); color: var(--azzurro); }
+.bottone--pieno:hover { background: var(--teal-scuro); border-color: var(--teal-scuro); color: var(--azzurro); }
+.bottone--vuoto { background: transparent; color: var(--teal); }
+.bottone--vuoto:hover { background: var(--teal); color: var(--azzurro); }
+.bottone--chiaro { background: var(--azzurro); border-color: var(--azzurro); color: var(--ardesia); }
+.bottone--chiaro:hover { background: var(--nebbia); border-color: var(--nebbia); color: var(--ardesia); }
+
+/* ---------- Testata ---------- */
+.testata { background: var(--grigio); border-bottom: 1px solid #DCDCDC; }
+.testata__riga { position: relative; display: flex; flex-wrap: wrap; align-items: center; padding-top: 30px; padding-bottom: 26px; row-gap: 26px; }
+.marchio { display: flex; align-items: center; gap: 32px; width: 100%; color: var(--ardesia); text-decoration: none; }
+.marchio img { width: 110px; height: 124px; flex-shrink: 0; }
+.marchio__testo { display: flex; flex-direction: column; gap: 8px; }
+.marchio__nome { font-family: var(--serif); font-size: clamp(36px, 5vw, 75px); font-weight: 500; line-height: 1;}
+.marchio__ruolo { font-family: var(--serif); font-size: clamp(22px, 3.2vw, 40px); font-weight: 500; line-height: 1.1; color: var(--muto); }
+
+.menu { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; }
+.menu a:not(.bottone) {
+  color: var(--ardesia); text-decoration: none; text-transform: uppercase;
+  font-size: 15px; font-weight: 400;
+}
+.menu a:not(.bottone):hover { color: var(--teal); }
+.menu-apri {
+  display: none; position: absolute; right: 24px; top: 30px; width: 44px; height: 44px; border-radius: 12px;
+  border: 1px solid #CFCFCF; background: #fff; color: var(--ardesia);
+  align-items: center; justify-content: center; cursor: pointer;
+}
+
+/* ---------- Apertura ---------- */
+.apertura { padding: 96px 0 104px; }
+.apertura__griglia { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.apertura__testo { display: flex; flex-direction: column; gap: 26px;}
+.occhiello { display: none; }
+.apertura__testo h1 { max-width: 560px; line-height: 0.9 !important;}
+.apertura__intro { font-size: 18px; line-height: 1.3; max-width: 500px; }
+
+.apertura__foto { position: relative; aspect-ratio: 5 / 5.4; max-width: 460px; width: 100%; justify-self: center; }
+.arco {
+  position: absolute; inset: 6% 15% 3% 15%;
+  border-radius: 999px 999px 36px 36px;
+  background: var(--azzurro) url("img/studio.jpg") center / cover no-repeat;
+}
+.punto { position: absolute; border-radius: 50%; background: var(--teal); }
+.p1 { left: 6%;  top: 25%; width: 5.4%; aspect-ratio: 1; }
+.p2 { left: 1%;  top: 48%; width: 3.2%; aspect-ratio: 1; }
+.p3 { left: 7%;  top: 71%; width: 6%;   aspect-ratio: 1; }
+.p4 { left: 31%; top: 0;   width: 2.9%; aspect-ratio: 1; }
+.p5 { left: 47.5%; top: -2%; width: 5%; aspect-ratio: 1; }
+.p6 { right: 31%; top: 0;   width: 2.9%; aspect-ratio: 1; }
+.p7 { right: 6%;  top: 25%; width: 5.4%; aspect-ratio: 1; }
+.p8 { right: 1%;  top: 48%; width: 3.2%; aspect-ratio: 1; }
+.p9 { right: 7%;  top: 71%; width: 6%;   aspect-ratio: 1; }
+
+/* ---------- Sezioni ---------- */
+.sezione { padding: 88px 0; position: relative; }
+.sezione--tinta { background: var(--azzurro); }
+.sezione--scura { background: var(--ardesia); color: var(--azzurro); }
+.sezione--scura h2, .sezione--scura h3 { color: var(--azzurro); }
+.sezione--ardesia { background: var(--ardesia-2); color: var(--azzurro); }
+.sezione--ardesia h2 { color: var(--azzurro); }
+.titolo-stretto { max-width: 600px; }
+
+.due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.due-colonne--alto { align-items: start; }
+
+.foto-studio {
+  min-height: 0; aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  background: var(--nebbia) url("img/andrea.jpg") center / cover no-repeat;
+}
+
+.dati { margin: 0; border-top: 1px solid #A9C7D4; }
+.dati div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #A9C7D4; font-size: 16px; }
+.dati dt { color: var(--muto); }
+.dati dd { margin: 0; font-weight: 400; text-align: right; }
+
+/* ---------- Chi sono ---------- */
+.chi-sono { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+.chi-sono__lato { display: flex; flex-direction: column; gap: 32px; position: sticky; top: 32px; }
+.chi-sono .foto-studio { min-height: 0; aspect-ratio: 1 / 1; }
+.testo-lungo { gap: 15px; max-width: 560px; }
+.testo-lungo h2 { font-weight: 700; font-size: clamp(34px, 4vw, 56px); }
+.testo-lungo .testo-grande { font-size: 18px; }
+.h2-sotto { display: block; font-family: var(--sans); font-weight: 300; font-size: 18px; line-height: 1.3; margin-top: 14px; }
+
+/* ---------- Instagram ---------- */
+.intestazione { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 28px; text-align: center; }
+.intestazione .pila { max-width: 660px; }
+.intestazione .bottone { min-height: 41px; padding: 0 22px; border-radius: 20px; font-size: 14px; background: var(--azzurro); border-color: var(--ardesia); color: var(--ardesia); }
+.intestazione .bottone:hover { background: var(--ardesia); color: var(--azzurro); }
+.feed-instagram { width: 100%; min-height: 200px; }
+.barra-prenota { display: none; }
+
+/* ---------- Aree ---------- */
+.griglia-aree { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.area { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px 18px; background: var(--ardesia-2); min-height: 0; }
+.area h3 { font-size: 27px; color: var(--nebbia); font-weight: 500; line-height: 1; }
+.area p { color: #E3EEF3; font-size: 15px; line-height: 1.35; }
+
+.pila--stretta { gap: 14px; }
+.riquadro-aiuto { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding-top: 12px; }
+.riquadro-aiuto h3 { color: var(--azzurro); }
+.riquadro-aiuto p { color: var(--azzurro); max-width: 620px; }
+
+/* ---------- Come funziona ---------- */
+.passaggi { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.passaggi li { display: flex; flex-direction: column; gap: 10px; }
+.passaggi__numero { font-family: var(--serif); font-size: 42px; font-weight: 700; line-height: 1.1; color: var(--teal); }
+.passaggi h3 { font-size: 28px; font-weight: 700; line-height: 1.1; }
+.come-funziona__fondo { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.tariffe { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: start; padding: 24px 28px; background: #EBEBEB; }
+.tariffe__testa { grid-column: 1 / -1; max-width: 560px; gap: 6px; }
+.tariffe__testa h3 { font-size: 28px; }
+.tariffe__testa p { font-size: 15px; }
+.tariffe__elenco { margin: 0; border-top: 1px solid #C8C8C8; }
+.tariffe__elenco div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid #C8C8C8; }
+.tariffe__elenco dt { font-size: 15px; }
+.tariffe__elenco dd { margin: 0; }
+.tariffe__prezzo { font-family: var(--serif); font-size: 22px; font-weight: 700; line-height: 1; color: var(--teal); }
+.tariffe__disdetta { display: flex; flex-direction: column; gap: 3px; font-size: 12.5px; line-height: 1.4; }
+.tariffe__disdetta h4 { font-size: 17px; font-weight: 700; }
+.etichette { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px; }
+.etichette li { padding: 10px 22px; border-radius: 20px; border: 1px solid var(--muto); background: var(--grigio); font-size: 14px; }
+
+/* ---------- Prenota ---------- */
+.prenota__testa { max-width: 480px; }
+.contatti { font-style: normal; display: flex; flex-direction: column; gap: 14px; }
+.contatti a, .contatti span { color: var(--nebbia); font-weight: 600; text-decoration: none; }
+.contatti a:hover { color: #fff; }
+.nota { font-size: 14px; color: var(--azzurro); background: var(--ardesia-3); padding: 18px 20px; border-radius: 20px; }
+.sezione--ardesia .testo-grande { color: var(--azzurro); }
+
+.calendario {
+  display: flex; flex-direction: column; gap: 18px;
+  padding: 36px 44px 32px; background: var(--pannello); color: var(--ardesia); width: 100%;
+}
+.calendario__testa { display: flex; flex-direction: column; gap: 6px; }
+.calendario h3 { font-size: 32px; }
+.calendario p { font-size: 16px; }
+.calendario__cornice { overflow: hidden; border: 1px solid #DADADA; background: #fff; }
+.calendario__cornice iframe { display: block; width: 100%; height: 680px; border: 0; }
+.calendario__cornice .calendly-inline-widget { width: 100%; min-width: 0 !important; height: 700px; }
+.calendario__alternativa { font-size: 15px; }
+.scheda { display: flex; flex-direction: column; gap: 18px; }
+.scheda[hidden] { display: none; }
+.scelta { display: flex; align-self: stretch; padding: 4px; border-radius: 100px; background: #E2E2E2; }
+.scelta__voce {
+  flex: 1; min-height: 44px; padding: 0 26px; border: 0; border-radius: 100px; background: transparent;
+  font-family: var(--sans); font-size: 16px; font-weight: 400; color: var(--ardesia); cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.scelta__voce--attiva { background: var(--teal); color: var(--azzurro); }
+
+/* ---------- Recensioni ---------- */
+.recensioni { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.recensioni .pila { max-width: 640px; }
+
+/* ---------- Piede ---------- */
+.piede { background: var(--grigio); padding: 40px 0 32px; font-size: 14px; color: var(--ardesia); }
+.piede__marchio { width: auto; flex: 1 1 auto; }
+.piede__marchio .marchio__ruolo { color: var(--ardesia); opacity: .75; }
+.piede__marchio .marchio__nome { font-size: clamp(30px, 4.2vw, 60px); }
+.piede__riga { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.piede__info { display: flex; flex-direction: column; gap: 8px; max-width: 420px; text-transform: uppercase; font-size: 13.8px; }
+.piede__info p { font-weight: 300; }
+.piede__link { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 8px; text-transform: none; }
+.piede__link a { color: var(--ardesia); }
+.piede__link a:hover { color: var(--teal); }
+.piede__mappa { color: var(--ardesia); }
+.piede__mappa:hover { color: var(--teal); }
+.piede__copy { margin-top: 32px; font-size: 13.8px; }
+
+/* =========================================================
+   Tablet e smartphone
+   ========================================================= */
+@media (max-width: 980px) {
+  .contenitore { padding: 0 32px; }
+  .chi-sono { grid-template-columns: 1fr; gap: 40px; }
+  .chi-sono__lato { position: static; order: 2; }
+  .riquadro-aiuto, .recensioni { flex-direction: column; align-items: flex-start; }
+
+  .testata .testata__riga { padding-top: 34px; padding-bottom: 34px; row-gap: 0; }
+  .marchio { padding-right: 56px; gap: 16px; }
+  .marchio img { width: 68px; height: 77px; }
+  .menu-apri { display: inline-flex; top: 60px; right: 32px; }
+
+  /* Barra "Prenota" fissa in basso: nascosta quando si è nella zona del calendario */
+  body { padding-bottom: 76px; }
+  .barra-prenota {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    padding: 12px 32px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(249, 249, 249, 0.96); border-top: 1px solid #DCDCDC;
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .barra-prenota--nascosta { transform: translateY(100%); opacity: 0; pointer-events: none; }
+  .barra-prenota .bottone { width: 100%; max-width: 480px; margin: 0 auto; display: flex; }
+
+  /* Header fisso: si restringe quando si scorre la pagina */
+  html { scroll-padding-top: 90px; }
+  .testata { position: sticky; top: 0; z-index: 50; }
+  .testata .testata__riga, .marchio img, .marchio__ruolo, .menu-apri { transition: padding .2s, width .2s, height .2s, top .2s; }
+  .testata--compatta .testata__riga { padding-top: 12px; padding-bottom: 12px; }
+  .testata--compatta .marchio img { width: 40px; height: 45px; }
+  .testata--compatta .marchio { gap: 12px; }
+  .testata--compatta .marchio__nome { font-size: 22px; }
+  .testata--compatta .marchio__ruolo { display: none; }
+  .testata--compatta .menu-apri { top: 14px; }
+  .menu {
+    display: none; flex-direction: column; align-items: stretch; gap: 0;
+    margin-top: 20px; border-top: 1px solid #DCDCDC;
+  }
+  .menu--aperto { display: flex; }
+  .menu a:not(.bottone) { padding: 14px 0; border-bottom: 1px solid #DCDCDC; }
+  .menu .bottone { margin-top: 18px; }
+
+  .apertura { padding: 56px 0 72px; }
+  .apertura__griglia, .due-colonne { grid-template-columns: 1fr; gap: 40px; }
+  #prenota .due-colonne { gap: 20px; }
+  #prenota .due-colonne > .pila { margin-top: 0 !important; }
+  .apertura__foto { max-width: 380px; }
+  .sezione { padding: 64px 0; }
+  .griglia-aree { grid-template-columns: 1fr 1fr; }
+  .passaggi { grid-template-columns: 1fr; gap: 32px; }
+  .tariffe { grid-template-columns: 1fr; }
+  .foto-studio { min-height: 0; }
+  .calendario { max-width: none; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .contenitore { padding: 0 20px; }
+  .menu-apri { right: 20px; }
+  .marchio img { width: 52px; height: 59px; }
+  .marchio__nome { font-size: 26px; }
+  .marchio__ruolo { font-size: 17px; }
+  .bottoni .bottone { width: 100%; }
+  .intestazione { align-items: center; }
+  .griglia-aree { grid-template-columns: 1fr; }
+  .area { min-height: 0; }
+  .dati div { flex-direction: column; gap: 2px; }
+  .dati dd { text-align: left; }
+  .calendario { padding: 18px 10px 14px; gap: 14px; }
+  .calendario__testa { padding: 0 8px; }
+  .calendario__alternativa { padding: 0 8px; }
+  .calendario__cornice { border: 0; background: transparent; }
+  .scelta__voce { min-height: 40px; font-size: 15px; }
+  .tariffe { padding: 20px 18px; gap: 20px; }
+  .scelta { display: flex; align-self: stretch; }
+  .scelta__voce { flex: 1; padding: 0 12px; }
+  .calendario__cornice iframe { height: 760px; }
+  .calendario__cornice .calendly-inline-widget { height: 620px; }
+  .riquadro-aiuto .bottone, .recensioni .bottone, .come-funziona__fondo .bottone { width: 100%; white-space: normal; text-align: center; }
+  .piede__riga { flex-direction: column; gap: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bottone { transition: none; }
+}
+
+/* Iubenda: nasconde il widget per le leggi USA ("Informativa sulla raccolta") */
+.iub__us-widget { display: none !important; }
+
+/* ---------- Pagina contatti ---------- */
+.contatti-pagina { padding-top: 72px; }
+.contatti-pagina__intro { max-width: 620px; }
+.contatti-pagina__griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.lista-contatti { list-style: none; margin: 0; padding: 0; border-top: 1px solid #D5D5D5; }
+.lista-contatti li { display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-bottom: 1px solid #D5D5D5; }
+.lista-contatti__etichetta { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muto); }
+.lista-contatti a, .lista-contatti li > span:not(.lista-contatti__etichetta) { font-size: 19px; font-weight: 400; color: var(--ardesia); }
+.lista-contatti a { text-decoration: none; }
+.lista-contatti a:hover { color: var(--teal); text-decoration: underline; }
+.riquadro-prenota { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 20px 24px; background: var(--azzurro); }
+.riquadro-prenota p { font-size: 17px; }
+
+.modulo { display: flex; flex-direction: column; gap: 18px; padding: 32px; background: #fff; border: 1px solid #DADADA; }
+.modulo h2 { font-size: 34px; }
+.modulo__avviso { font-size: 14px; padding: 12px 14px; background: #F2F2F2; }
+.modulo__campo { display: flex; flex-direction: column; gap: 6px; }
+.modulo label { font-size: 15px; font-weight: 400; }
+.modulo__facoltativo { color: var(--muto); font-weight: 300; }
+.modulo input[type="text"], .modulo input[type="email"], .modulo input[type="tel"], .modulo textarea {
+  width: 100%; padding: 12px 14px; border: 1px solid #BDBDBD; border-radius: 8px; background: #fff;
+  font: inherit; font-size: 16px; color: var(--ardesia);
+}
+.modulo textarea { resize: vertical; min-height: 130px; }
+.modulo input:focus-visible, .modulo textarea:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-color: var(--teal); }
+.modulo__trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.modulo__consenso { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.4; }
+.modulo__consenso input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--teal); }
+.modulo .bottone { align-self: flex-start; cursor: pointer; font-family: var(--sans); }
+.modulo__esito { font-size: 15px; }
+.modulo__esito:empty { display: none; }
+.modulo__esito--ok { color: var(--teal-scuro); }
+.modulo__esito--errore { color: #A12B2B; }
+.menu a[aria-current="page"]:not(.bottone) { color: var(--teal); }
+
+@media (max-width: 980px) {
+  .contatti-pagina { padding-top: 48px; }
+  .contatti-pagina__griglia { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .modulo { padding: 22px 18px; }
+  .modulo .bottone { align-self: stretch; }
+  .lista-contatti a, .lista-contatti li > span:not(.lista-contatti__etichetta) { font-size: 17px; overflow-wrap: anywhere; }
+}
+
+/* ---------- Pagina prenotazione ---------- */
+.prenota__testa h1 { font-size: clamp(36px, 4.4vw, 56px); color: var(--azzurro); }
